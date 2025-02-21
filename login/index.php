@@ -12,7 +12,7 @@
 
 <body>
     <div class="main-container container-fluid">
-        <div class="for-coach">
+        <div class="for-coach section">
             <header>
                 <button class="btn btn-success">login</button>
                 <span>
@@ -20,12 +20,10 @@
                 </span>
                 <button class="btn btn-danger">signup</button>
             </header>
-            <div class="main-form">
-               
-              </div>
-
+            <div class="main-form">     
+            </div>
         </div>
-        <div class="for-player">
+        <div class="for-player section">
             <header>
                 <button class="btn btn-success">login</button>
                 <span>
@@ -33,10 +31,8 @@
                 </span>
                 <button class="btn btn-danger">signup</button>
             </header>
-            <div class="main-form">
-                
+            <div class="main-form"> 
             </div>
-
         </div>
     </div>
 
@@ -47,22 +43,35 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function() {
-        // $('.for-coach').on('click', function() {
-        //     // $('.for-player').css('flex-basis', '5vh');
-        //     // $('.for-player header').css('flex-basis', '100%');
-        //     // $('.for-player .main-form').css('flex-basis', '0%');
-        //     $('.for-player .main-form').html('');
-        //     // $('.for-coach').css('flex-basis', '93vh');
-        // });
-        // $('.for-player').on('click', function() {
-        //   $('.for-coach').css('flex-basis', '5vh');
-        //     $('.for-coach header').css('flex-basis', '100%');
-        //     $('.for-coach .main-form').css('flex-basis', '0%');
-        //     $('.for-coach .main-form').html('');
-        //     $('.for-player').css('flex-basis', '93vh');
-        // });
-        
+        $('.for-coach').on('click', function() {
+            $('.for-player').css('flex-basis', '5vh');
+            $('.for-player header').css('flex-basis', '100%');
+            $('.for-player .main-form').css('flex-basis', '0%');
+            $('.for-player .main-form').html('');
+            $('.for-coach').css('flex-basis', '93vh');
+
+            $('.for-coach header').css('flex-basis', '5%');
+            $('.for-coach .main-form').css('flex-basis', '95%');
+        });
+        $('.for-player').on('click', function() {
+          $('.for-coach').css('flex-basis', '5vh');
+            $('.for-coach header').css('flex-basis', '100%');
+            $('.for-coach .main-form').css('flex-basis', '0%');
+            $('.for-coach .main-form').html('');
+            $('.for-player').css('flex-basis', '93vh');
+
+            $('.for-player header').css('flex-basis', '5%');
+            $('.for-player .main-form').css('flex-basis', '95%');
+
+            
+        });
+
     });
+
+    // isOpen=false;
+    // $('.section').on("click", function(e){
+    //     e.style.height="98%";
+    // });
     </script>
 </body>
 
