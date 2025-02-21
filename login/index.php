@@ -14,24 +14,24 @@
     <div class="main-container container-fluid">
         <div class="for-coach section">
             <header>
-                <button class="btn btn-success">login</button>
+                <button class="btn btn-success login-coach-btn">login</button>
                 <span>
                     <h1>Login As Coach</h1>
                 </span>
-                <button class="btn btn-danger">signup</button>
+                <button class="btn btn-danger signup-coach-btn">signup</button>
             </header>
-            <div class="main-form">     
+            <div class="main-form">
             </div>
         </div>
         <div class="for-player section">
             <header>
-                <button class="btn btn-success">login</button>
+                <button class="btn btn-success login-player-btn">login</button>
                 <span>
                     <h1>Login As Player</h1>
                 </span>
-                <button class="btn btn-danger">signup</button>
+                <button class="btn btn-danger  signup-player-btn">signup</button>
             </header>
-            <div class="main-form"> 
+            <div class="main-form">
             </div>
         </div>
     </div>
@@ -42,19 +42,33 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
-    $(document).ready(function() {
+    let lCoach, sCoach, lPlayer, splayer;
+    lCoach = $('.login-coach-btn');
+    sCoach = $('.signup-coach-btn');
+    lPlayer = $('.login-player-btn');
+    splayer = $('.signup-player-btn');
+    if (lCoach.on('click') || sCoach.on('click')) {
         $('.for-coach').on('click', function() {
             $('.for-player').css('flex-basis', '5vh');
             $('.for-player header').css('flex-basis', '100%');
             $('.for-player .main-form').css('flex-basis', '0%');
-            $('.for-player .main-form').html('');
             $('.for-coach').css('flex-basis', '93vh');
 
             $('.for-coach header').css('flex-basis', '5%');
             $('.for-coach .main-form').css('flex-basis', '95%');
+            $.ajax({
+                type: "POST",
+                url: "../contents/coach-login.php",
+                success: function(response) {
+                    $('.for-coach .main-form').html(response);
+                }
+            })
+
         });
-        $('.for-player').on('click', function() {
-          $('.for-coach').css('flex-basis', '5vh');
+    }
+    if (lPlayer.on('click') || sPlayer.on('click')) {
+      $('.for-player').on('click', function() {
+            $('.for-coach').css('flex-basis', '5vh');
             $('.for-coach header').css('flex-basis', '100%');
             $('.for-coach .main-form').css('flex-basis', '0%');
             $('.for-coach .main-form').html('');
@@ -63,8 +77,39 @@
             $('.for-player header').css('flex-basis', '5%');
             $('.for-player .main-form').css('flex-basis', '95%');
 
-            
+
         });
+    }
+    $(document).ready(function() {
+        // $('.for-coach').on('click', function() {
+        //     $('.for-player').css('flex-basis', '5vh');
+        //     $('.for-player header').css('flex-basis', '100%');
+        //     $('.for-player .main-form').css('flex-basis', '0%');
+        //     $('.for-coach').css('flex-basis', '93vh');
+
+        //     $('.for-coach header').css('flex-basis', '5%');
+        //     $('.for-coach .main-form').css('flex-basis', '95%');
+        //     $.ajax({
+        //       type: "POST",
+        //       url: "../contents/coach-login.php",
+        //       success: function(response) {
+        //           $('.for-coach .main-form').html(response);
+        //       }
+        //     })
+
+        // });
+        // $('.for-player').on('click', function() {
+        //     $('.for-coach').css('flex-basis', '5vh');
+        //     $('.for-coach header').css('flex-basis', '100%');
+        //     $('.for-coach .main-form').css('flex-basis', '0%');
+        //     $('.for-coach .main-form').html('');
+        //     $('.for-player').css('flex-basis', '93vh');
+
+        //     $('.for-player header').css('flex-basis', '5%');
+        //     $('.for-player .main-form').css('flex-basis', '95%');
+
+
+        // });
 
     });
 
