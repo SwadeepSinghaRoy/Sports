@@ -36,6 +36,7 @@ body{
     width: 100%;
     border: 1px solid gold !important;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     & > span > h1 {
@@ -44,7 +45,7 @@ body{
   }
 .for-coach:hover,.for-player:hover{
     cursor: pointer;
-    transform: scale(0.5);
+    /* transform: scale(0.5); */
     background-color: aqua !important;
 }
 .for-coach{
@@ -54,4 +55,30 @@ body{
 .for-player{
     background-color: lightgreen !important;
     opacity: 0.5;
+}
+header {
+  flex-basis: 7%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: darkblue; */
+
+}
+.btn{
+  height: 100%;
+  margin: 1%;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+
+
+}
+.main-form{
+  flex-basis: 93%;
+  width: 100%;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+  /* background-color: red; */
 }
