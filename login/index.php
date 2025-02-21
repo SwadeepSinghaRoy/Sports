@@ -47,76 +47,81 @@
     sCoach = $('.signup-coach-btn');
     lPlayer = $('.login-player-btn');
     splayer = $('.signup-player-btn');
-    if (lCoach.on('click') || sCoach.on('click')) {
-        $('.for-coach').on('click', function() {
-            $('.for-player').css('flex-basis', '5vh');
-            $('.for-player header').css('flex-basis', '100%');
-            $('.for-player .main-form').css('flex-basis', '0%');
-            $('.for-coach').css('flex-basis', '93vh');
 
-            $('.for-coach header').css('flex-basis', '5%');
-            $('.for-coach .main-form').css('flex-basis', '95%');
+    $(document).ready(function() {
+    $('.login-coach-btn, .signup-coach-btn').on('click', function() {
+        $('.for-player').css('flex-basis', '5vh');
+        $('.for-player header').css('flex-basis', '100%');
+        $('.for-player .main-form').css('flex-basis', '0%');
+        $('.for-coach').css('flex-basis', '93vh');
+        $('.for-coach header').css('flex-basis', '5%');
+        $('.for-coach .main-form').css('flex-basis', '95%');
+        $('.for-player .main-form').html("");
+
+        // ✅ Check which button was clicked using $(this)
+        if ($(this).hasClass('login-coach-btn')) {
             $.ajax({
                 type: "POST",
                 url: "../contents/coach-login.php",
                 success: function(response) {
                     $('.for-coach .main-form').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Error: " + error);
                 }
-            })
-
-        });
-    }
-    if (lPlayer.on('click') || sPlayer.on('click')) {
-      $('.for-player').on('click', function() {
-            $('.for-coach').css('flex-basis', '5vh');
-            $('.for-coach header').css('flex-basis', '100%');
-            $('.for-coach .main-form').css('flex-basis', '0%');
-            $('.for-coach .main-form').html('');
-            $('.for-player').css('flex-basis', '93vh');
-
-            $('.for-player header').css('flex-basis', '5%');
-            $('.for-player .main-form').css('flex-basis', '95%');
-
-
-        });
-    }
-    $(document).ready(function() {
-        // $('.for-coach').on('click', function() {
-        //     $('.for-player').css('flex-basis', '5vh');
-        //     $('.for-player header').css('flex-basis', '100%');
-        //     $('.for-player .main-form').css('flex-basis', '0%');
-        //     $('.for-coach').css('flex-basis', '93vh');
-
-        //     $('.for-coach header').css('flex-basis', '5%');
-        //     $('.for-coach .main-form').css('flex-basis', '95%');
-        //     $.ajax({
-        //       type: "POST",
-        //       url: "../contents/coach-login.php",
-        //       success: function(response) {
-        //           $('.for-coach .main-form').html(response);
-        //       }
-        //     })
-
-        // });
-        // $('.for-player').on('click', function() {
-        //     $('.for-coach').css('flex-basis', '5vh');
-        //     $('.for-coach header').css('flex-basis', '100%');
-        //     $('.for-coach .main-form').css('flex-basis', '0%');
-        //     $('.for-coach .main-form').html('');
-        //     $('.for-player').css('flex-basis', '93vh');
-
-        //     $('.for-player header').css('flex-basis', '5%');
-        //     $('.for-player .main-form').css('flex-basis', '95%');
-
-
-        // });
-
+            });
+        } else if ($(this).hasClass('signup-coach-btn')) {
+            $.ajax({
+                type: "POST",
+                url: "../contents/coach-signup.php", // Assuming signup URL
+                success: function(response) {
+                    $('.for-coach .main-form').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Error: " + error);
+                }
+            });
+        }
     });
 
-    // isOpen=false;
-    // $('.section').on("click", function(e){
-    //     e.style.height="98%";
-    // });
+    $('.login-player-btn, .signup-player-btn').on('click', function() {
+        $('.for-coach').css('flex-basis', '5vh');
+        $('.for-coach header').css('flex-basis', '100%');
+        $('.for-coach .main-form').css('flex-basis', '0%');
+        $('.for-coach .main-form').html('');
+        $('.for-player').css('flex-basis', '93vh');
+        $('.for-player header').css('flex-basis', '5%');
+        $('.for-player .main-form').css('flex-basis', '95%');
+        $('.for-coach .main-form').html("");
+
+
+        if ($(this).hasClass('login-player-btn')) {
+            $.ajax({
+                type: "POST",
+                url: "../contents/player-login.php",
+                success: function(response) {
+                    $('.for-player .main-form').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Error: " + error);
+                }
+            });
+        } else if ($(this).hasClass('signup-player-btn')) {
+            $.ajax({
+                type: "POST",
+                url: "../contents/player-signup.php", // Assuming signup URL
+                success: function(response) {
+                    $('.for-player .main-form').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Error: " + error);
+                }
+            });
+        }
+
+    });
+});
+
     </script>
 </body>
 

@@ -39,7 +39,6 @@ body {
   flex-basis: 49%;
   /* Initial size (height in this case) */
   width: 100%;
-  border: 1px solid gold !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
