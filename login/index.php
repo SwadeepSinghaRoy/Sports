@@ -12,28 +12,34 @@
 
 <body>
     <div class="main-container container-fluid">
-        <div class="for-coach section">
-            <header>
-                <button class="btn btn-success login-coach-btn">login</button>
-                <span>
-                    <h1>Login As Coach</h1>
-                </span>
-                <button class="btn btn-danger signup-coach-btn">signup</button>
-            </header>
-            <div class="main-form">
+            <div class="for-coach section">
+                <header>
+                    <button class="btn btn-success login-coach-btn">login</button>
+                    <span>
+                        <h1>Login As Coach</h1>
+                    </span>
+                    
+                    <button class="btn btn-danger signup-coach-btn">signup</button>
+                </header>
+               
+                <div class="main-form">
+                </div>
+                <footer><strong><a href="../">HOME</a></strong></footer>
             </div>
-        </div>
-        <div class="for-player section">
-            <header>
-                <button class="btn btn-success login-player-btn">login</button>
-                <span>
-                    <h1>Login As Player</h1>
-                </span>
-                <button class="btn btn-danger  signup-player-btn">signup</button>
-            </header>
-            <div class="main-form">
+            <div class="for-player section">
+                <header>
+                    <button class="btn btn-success login-player-btn">login</button>
+                    <span>
+                        <h1>Login As Player</h1>
+                    </span>
+                    <button class="btn btn-danger  signup-player-btn">signup</button>
+                </header>
+                <div class="main-form">
+                </div>
+                <footer><strong><a href="../index.php">HOME</a></strong></footer>
             </div>
-        </div>
+        
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

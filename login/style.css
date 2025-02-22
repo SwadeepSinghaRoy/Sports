@@ -23,6 +23,7 @@ body {
   /* background-color: rgba(0, 0, 0, 0.7) !important; */
 }
 
+
 /* .content::before {
     content: '';
     position: absolute;
@@ -59,12 +60,14 @@ body {
 .for-coach {
   background-color: lightblue !important;
   opacity: 0.5;
+  position: relative;
+  text-align: center;
 }
-
 .for-player {
   background-color: lightgreen !important;
   opacity: 0.5;
 }
+
 
 header {
   flex-basis: 7%;
@@ -85,10 +88,17 @@ header {
 }
 
 .main-form {
-  flex-basis: 93%;
+  flex-basis: 91%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   /* background-color: rgb(255, 0, 0); */
+}
+footer{
+  flex-basis: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
