@@ -2,36 +2,37 @@
     // echo "<h1>coach_signup</h1>";
 ?>
 <form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
+  <div class="col-4">
+    <label for="inputEmail4" class="form-label">Name</label>
+    <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
   </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
+  <div class="col-4">
+    <label for="inputPassword4" class="form-label">Email</label>
+    <input type="text" class="form-control" id="inputPassword4" placeholder="Email">
   </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  <div class="col-4">
+    <label for="inputAddress" class="form-label">Password</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Password">
   </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  <div class="col-1">
+    <label for="inputAddress2" class="form-label">Age</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Age">
   </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
+  <div class="col-4">
+    <label for="inputCity" class="form-label">Country</label>
     <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
+      <option selected>Choose your country</option>
       <option>...</option>
     </select>
   </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
+  <div class="col-2">
+    <label for="inputState" class="form-label">Experience</label>
+    <input type="number" class="form-control" min="0" id="inputAddress2" placeholder="Experience">
+  </div>
+  <div class="col-4">
+    <p>click on "choose" button to upload your image</p>
+    <input type="file" id="myfile" name="filename">
+    <input type="submit">
   </div>
   <div class="col-12">
     <div class="form-check">
