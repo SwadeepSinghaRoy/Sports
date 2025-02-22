@@ -11,28 +11,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item btn btn-success">
-                        <a class="nav-link active" aria-current="page" href="./login">login</a>
-                    </li>
-                    <li><a class="navbar-brand" href="#">Navbar</a></li>
-                    <li class="nav-item btn btn-success">
-                        <a class="nav-link" href="#">signup</a>
-                    </li>
-                </ul>
+    <div class="main-container container-fluid">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item btn btn-success">
+                            <a class="nav-link active" aria-current="page" href="./login">login</a>
+                        </li>
+                        <li><a class="navbar-brand" href="#">Navbar</a></li>
+                        <li class="nav-item btn btn-success">
+                            <a class="nav-link" href="#">signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="d">
+                <img src="img/INDIAN.webp">
             </div>
         </div>
-    </nav>
-    <div class="main">
-        <div class="d"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
