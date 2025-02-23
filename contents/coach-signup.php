@@ -1,5 +1,5 @@
 <?php
-    // echo "<h1>coach_signup</h1>";
+  
 ?>
 <form class="row g-3">
   <div class="col-4">
