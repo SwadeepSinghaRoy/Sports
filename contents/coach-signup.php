@@ -1,4 +1,8 @@
 <?php
+  require_once 'config.php';
+  $stmt=$pdo->prepare();
+  $stmt->execute();
+  $country= $stmt->fetchAll(PDO::FETCH_ASSOC);
   
 ?>
 <form class="row g-3">
