@@ -1,9 +1,9 @@
 <?php
   require_once 'config.php';
-  $stmt=$pdo->prepare();
+  $stmt=$pdo->prepare('select * from country');
   $stmt->execute();
   $country= $stmt->fetchAll(PDO::FETCH_ASSOC);
-  
+  print_r($country);
 ?>
 <form class="row g-3">
   <div class="col-4">
