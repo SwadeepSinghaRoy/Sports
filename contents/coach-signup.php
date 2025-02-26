@@ -4,7 +4,7 @@
   $stmt->execute();
   $country= $stmt->fetchAll(PDO::FETCH_ASSOC);
   print_r($country);
-?>
+?> 
 <form class="row g-3">
   <div class="col-4">
     <label for="inputEmail4" class="form-label">Name</label>

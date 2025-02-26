@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'mcq2_db';
+$db   = 'sports_db';
 $user = 'root';
 $pass = 'swadeepsingharoy';
 $charset = 'utf8mb4';
