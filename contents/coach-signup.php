@@ -1,9 +1,9 @@
 <?php
-  require_once 'config.php';
+  require_once '../config.php';
   $stmt=$pdo->prepare('select * from country');
   $stmt->execute();
-  $country= $stmt->fetchAll(PDO::FETCH_ASSOC);
-  print_r($country);
+  $countrys= $stmt->fetchAll(PDO::FETCH_ASSOC);
+  //print_r($country);
 ?> 
 <form class="row g-3">
   <div class="col-4">
@@ -26,7 +26,11 @@
     <label for="inputCity" class="form-label">Country</label>
     <select id="inputState" class="form-select">
       <option selected>Choose your country</option>
-      <option>...</option>
+      <?php
+        foreach ($countrys as $country) {
+          echo "<option value="$country['id']">.$country['name'].</option>";
+        }
+      ?>
     </select>
   </div>
   <div class="col-2">
