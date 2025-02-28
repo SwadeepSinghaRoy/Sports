@@ -20,14 +20,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item btn btn-success">
-                            <a class="nav-link active" aria-current="page" href="./login">login</a>
+                        <li onclick="loginPage()" class="nav-item btn btn-success">
+                            <a class="nav-link active" aria-current="page" >login</a>
                         </li>
-                        <li><a class="navbar-brand" href="#">Navbar</a></li>
-                        <li class="nav-item btn btn-success">
-                            <a class="nav-link" href="#">signup</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -39,6 +34,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script>
+        function loginPage(){
+        location.href="./login"
+    }
     </script>
 </body>
 
