@@ -3,6 +3,10 @@
   $stmt=$pdo->prepare('select * from country');
   $stmt->execute();
   $countrys= $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $stmt=$pdo->prepare('select * from ');
+  $stmt->execute();
+  $countrys= $stmt->fetchAll(PDO::FETCH_ASSOC);
   //print_r($country);
 ?> 
 <form class="row g-3">
@@ -28,7 +32,7 @@
       <option selected>Choose your country</option>
       <?php
         foreach ($countrys as $country) {
-          echo "<option value="$country['id']">.$country['name'].</option>";
+          echo '<option value='.$country['id'].'>'.$country['name'].'</option>';
         }
       ?>
     </select>
