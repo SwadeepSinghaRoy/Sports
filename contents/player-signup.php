@@ -4,11 +4,11 @@
   $stmt->execute();
   $countrys= $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $stmt=$pdo->prepare('select * from specifications');
-  $stmt->execute();
-  $specification= $stmt->fetchAll(PDO::FETCH_ASSOC);
-  //print_r($country);
-?> 
+//   $stmt=$pdo->prepare('select * from specifications');
+//   $stmt->execute();
+//   $specification= $stmt->fetchAll(PDO::FETCH_ASSOC);
+//   //print_r($country);
+?>
 <form class="row g-3">
     <div class="col-4">
         <label for="inputEmail4" class="form-label">Name</label>
@@ -30,7 +30,11 @@
         <label for="inputCity" class="form-label">Country</label>
         <select id="inputState" class="form-select">
             <option selected>Choose your country</option>
-            <option>...</option>
+            <?php
+                foreach ($countrys as $country) {
+                    echo '<option value='.$country['id'].'>'.$country['name'].'</option>';
+                }
+            ?>
         </select>
     </div>
     <div class="col-2">
